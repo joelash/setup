@@ -55,13 +55,14 @@ brew "wget"
 # akiflow
 ## END NEED
 
-cask "1password" # TODO: this or mas
+cask "1password"
 cask "dash"
 cask "dropbox"
 cask "google-chrome"
 cask "hookshot"
 cask "hyperswitch"
 cask "raycast"
+cask "slack"
 cask "superhuman"
 cask "swish"
 brew "tmux"
@@ -76,9 +77,8 @@ cask "font-jetbrains-mono"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Slack", id: 803453959
-mas "Xcode", id: 497799835
+# mas "Keynote", id: 409183694
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+# mas "Xcode", id: 497799835
 
