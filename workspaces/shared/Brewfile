@@ -71,7 +71,7 @@ cask "zerotier-one"
 
 # Cask Fonts (https://github.com/Homebrew/homebrew-cask-fonts)
 
-cask font-anonymous-pro
+cask "font-anonymous-pro"
 cask "font-jetbrains-mono"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
