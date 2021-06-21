@@ -1,0 +1,20 @@
+{
+  "coauthors": {
+    "mn": {
+      "name": "Mark Nicolosi",
+      "email": "mark@aclaimant.com"
+    },
+    "cn": {
+      "name": "Case Nelson",
+      "email": "case@aclaimant.com"
+    },
+    "bd": {
+      "name": "Brian Drum",
+      "email": "brian@aclaimant.com"
+    },
+    "cm": {
+      "name": "Charles Mueller",
+      "email": "charles.mueller@aclaimant.com"
+    }
+  }
+}

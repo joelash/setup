@@ -1,0 +1,77 @@
+#terminal name
+
+function tname {
+  unset PROMPT_COMMAND
+  echo -ne "\033]0;$1\007"
+}
+
+function _t {
+  tname ${PWD##*/}
+}
+
+
+function tmux {
+  if [ -n "$3" ] && ([ "$1" = "a" ] || [ "$1" = "new" ]) && ! [[ "$3" =~ ^[0-9]+$ ]]; then
+    tname $3
+  fi
+  command tmux $@
+}
+
+# random
+
+function any() {
+  local grep_command="grep $1"
+  ps -ef | grep -v grep | $grep_command
+}
+
+# git
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
+}
+
+function __parse_git_branch__ {
+  local branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/")
+  if [[ -n "${branch}" ]]; then
+    echo " ${branch}"
+  fi
+}
+
+function parse_rvm_gemset {
+  echo $GEM_HOME | sed 's/.*\///'
+}
+
+# From: http://www.reddit.com/r/zsh/comments/vopro/truncated_path_in_zsh_prompt/c5ecfb3
+function collapse_pwd {
+  echo $(pwd | sed -e "s,^$HOME,~,")
+}
+
+function truncated_pwd() {
+  local n=$1 # n = number of directories to show in full (n = 3, /a/b/c/dee/ee/eff)
+  local path=$(collapse_pwd)
+
+  # split our path on /
+  IFS=/ read -a dirs <<< "$path"
+  local dirs_length=${#dirs[@]}
+
+  local result=""
+  local max=$(($dirs_length - $n))
+  for (( i = 0; i < $dirs_length; i++ )); do
+    step="${dirs[$i]}"
+
+    local intermediate="${step:0:1}"
+    if [[ $i -ge $max ]]; then
+      intermediate="${step}"
+    elif [[ "$intermediate" = "." ]]; then
+      intermediate="${step:0:2}"
+    fi
+
+    if [[ -z "$result" ]] && [[ "$intermediate" = "~" ]]; then
+      result="$intermediate"
+    elif [[ -n "$step" ]]; then
+      result="$result/$intermediate"
+    fi
+
+  done
+
+  echo $result
+}

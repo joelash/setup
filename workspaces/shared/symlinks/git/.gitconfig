@@ -1,51 +1,74 @@
 [user]
-  name = Brian Drum
-  useConfigOnly = true
-#   Uncomment to set email globally
-#   email = brian@briandrum.net
-[core]
-  excludesfile = ~/.gitignore
-  editor = bbedit -w
-[credential]
-  helper = osxkeychain
-[diff]
-  tool = "bbdiff"
-[difftool "bbdiff"]
-  cmd = bbdiff --wait --resume \"$LOCAL\" \"$REMOTE\"
-  prompt = false
-[fetch]
-  prune = true
-[github]
-  user = briandrum
-[merge]
-  tool = bbdiff
-[mergetool]
-  keepBackup = false
-  prompt = false
-[pull]
-  rebase = true
+	email = joel@aclaimant.com
+	name = Joel Friedman
+[color]
+  branch = auto
+  diff = auto
+  grep = auto
+  interactive = auto
+  status = auto
+  ui = auto
 [alias]
-#   amend = commit --amend --reuse-message=HEAD
-  br = branch
+  st = status -sb
   ci = commit
+  br = branch
   co = checkout
-#   contrib = shortlog --summary --numbered
-#   cr = clone --recursive
-#   df = diff --word-diff
+  df = diff
+  di = diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset %cN -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lgg = log -p
+  last = log -1 HEAD
+  who = shortlog -s --
+  grep = grep --color
+  diff = diff --color
+  staged = diff --cached
+  dic = diff --cached
   dt = difftool
-#   g = grep --break --heading --line-number
-#   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-#   ld = "!sh -c \"git log --since '${1:-1} days ago' --oneline --author $(git config user.email)\" -"
-#   lg = log -p
-#   ll = log --pretty=oneline --graph --abbrev-commit
-#   lm = log --pretty=format:'* %s (%h)'
-#   patch = !git --no-pager diff --no-color
-  p = push
-#   pf = push --force
-#   pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-#   show-ignored = "! git clean -ndX | perl -pe 's/Would remove/Ignored:/'"
-  st = status
-#   stl = ls-files -m -o --exclude-standard
-#   sts = status -sb
-#   unstage = reset --hard HEAD
-  up = !git pull --autostash
+  dtc = difftool --cached
+  stagedtool = difftool --cached
+  grep = grep -n --color
+  pushh = push origin HEAD
+[branch]
+  autosetupmerge = always
+[core]
+	excludesfile = /Users/joelash/.gitignore
+  safecrlf = true
+	# hooksPath = /Users/joelash/.git/hooks
+	pager = less -r
+[push]
+  default = tracking
+[apply]
+  ignore-whitespace = nowarn
+[pull]
+	rebase = true
+[github]
+	user = joelash
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+	keepBackup = true
+[merge]
+	tool = Kaleidoscope
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[hub]
+	protocol = ssh
+[init]
+	defaultBranch = master

@@ -1,0 +1,42 @@
+(defonce ^:private subscriptions (atom {}))
+(defn publish [topic & message]
+  (doseq [f (get @subscriptions topic)]
+    (f message)))
+(defn subscribe [topic f & fn-args]
+  (swap! subscriptions update topic (fnil conj #{})
+         (fn publish-handler [message]
+           (apply f (concat message fn-args)))))
+(subscribe :foo/bar inc)
+@subscriptions
+(subscribe :foo/bar dec)
+(reset subscriptions empty)
+(reset! subscriptions empty)
+@subscriptions
+(reset! subscriptions {})
+@subscriptions
+(subscribe :foo/bar dec)
+(subscribe :foo/bar * 4)
+(publicsh :foo/bar 1)
+(publish :foo/bar 1)
+(publish :foo/bar 8)
+(reset! subscriptions {})
+(subscribe :foo/bar (fn [x] (puts "dec") (dec x))
+)
+(subscribe :foo/bar (fn [x] (println "dec") (dec x)))
+(subscribe :foo/bar (fn [x] (println "*") (* 7 x)))
+(publish :foo/bar 1)
+(subscribe :foo/bar (fn [x] (println "/") (/  x 2)))
+(publish :foo/bar 1)
+(subscribe :foo/bar (fn [x] (println "*") (* 7 x)))
+(publish :foo/bar 1)
+(reset! subscriptions {})
+(defn dec-1 (println "dec"))
+(defn [x] dec-1 (println "dec"))
+(defn [x] dec1 (println "dec"))
+(defn dec-1 [x] (println "dec"))
+(defn inc-1 [x] (println "inc"))
+(defn div-1 [x] (println "div"))
+(subscribe :foo/bar #'dec-1)
+(subscribe :foo/bar #'inc-1)
+(subscribe :foo/bar #'div-1)
+(publish :foo/bar 1)

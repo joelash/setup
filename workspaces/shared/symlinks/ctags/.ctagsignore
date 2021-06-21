@@ -1,0 +1,9 @@
+.git
+.svn
+.cljs_rhino_repl/**
+target/**
+tmp
+log
+out
+pkg
+

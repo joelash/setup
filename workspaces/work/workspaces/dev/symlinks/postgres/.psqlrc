@@ -1,0 +1,8 @@
+SET search_path TO public,svc,common;
+\pset null '(null)'
+\x auto
+\set ON_ERROR_ROLLBACK interactive
+/* \set HISTFILE ~/.psql_history- :HOST */
+\set HISTCONTROL ignoredups
+\set PROMPT1 '%`echo "$ACLPROMPT"` %:USER:> %/%R%#%x '
+

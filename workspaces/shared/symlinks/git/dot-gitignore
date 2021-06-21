@@ -1,9 +1,37 @@
+*.swp
+*.swo
+tags
+.tags
+TAGS
+.tags_swp
+
 *~
 ._*
+
 .DS_Store
-.idea
-.vscode
-node_modules
+
+# VS Code
+*.code-workspace
+*.vscode
+
+.env
+
+.#*
+\#*\#
+
+.nrepl-port
+.nrepl-history
+.agignore
+
+# virtual env folders
+*.virtualenv/
+
+Dockerfile*.ignored
+yaks.ignored.md
+
+# Direnv
+.envrc
+
 bower_components
 npm-debug.log
 Brewfile.lock.json
