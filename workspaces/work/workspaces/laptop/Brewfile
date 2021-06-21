@@ -1,0 +1,15 @@
+# For work "laptops" (non-Dev)
+
+cask "evernote"
+cask "gpg-suite-no-email"
+cask "swish"
+cask "linear-linear"
+cask "notion"
+cask "setapp"
+cask "thingsmacsandboxhelper"
+cask "zoom"
+
+
+mas "Bear", id: 1091189122
+mas "Fantastical", id: 975937182
+mas "Things 3", id: 904280696
