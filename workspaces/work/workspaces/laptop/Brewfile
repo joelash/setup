@@ -4,9 +4,13 @@ cask "evernote"
 cask "gpg-suite-no-email"
 cask "swish"
 cask "linear-linear"
+cask "microsoft-word"
+cask "microsoft-excel"
 cask "notion"
 cask "setapp"
+cask "soundsource"
 cask "thingsmacsandboxhelper"
+cask "transmit"
 cask "zoom"
 
 mas "Bear", id: 1091189122
