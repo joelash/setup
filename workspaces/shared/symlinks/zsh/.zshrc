@@ -21,3 +21,5 @@ function git_branch_name()
 
 # Add sbin to $PATH for Homebrew
 # export PATH="/usr/local/sbin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
