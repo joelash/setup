@@ -14,10 +14,10 @@ function git_branch_name()
 }
 
 # Enable substitution in the prompt.
-setopt prompt_subst
+# setopt prompt_subst
 
 # Config for prompt. PS1 synonym.
-prompt='%2/ $(git_branch_name) 🍔 '
+# prompt='%2/ $(git_branch_name) 🍔 '
 
 # Add sbin to $PATH for Homebrew
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
