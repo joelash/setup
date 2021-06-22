@@ -22,7 +22,7 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
 " Coc
 " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Other
 Plug 'rizzatti/funcoo.vim'
