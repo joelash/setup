@@ -12,5 +12,5 @@
 
 ## Scripts
 - [x] Rosetta
-    - [ ] Don't install if already installed
+    - [x] Don't install if already installed
 - [ ] StrongDM
