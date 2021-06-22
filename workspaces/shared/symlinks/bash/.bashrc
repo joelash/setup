@@ -3,7 +3,7 @@ for file in ~/.bash/*.sh; do
   source $file
 done
 source ~/.bash/aliases
-source ~/.bash_completions/alacritty-completions.bash
+# source ~/.bash_completions/alacritty-completions.bash
 
 if [ -f ~/.bash/private ]; then
   . ~/.bash/private
