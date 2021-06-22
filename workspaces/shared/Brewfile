@@ -57,7 +57,6 @@ brew "wget"
 ## END NEED
 
 cask "1password"
-cask "dash"
 cask "dropbox"
 cask "google-chrome"
 cask "hookshot"
