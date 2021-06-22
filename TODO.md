@@ -1,7 +1,7 @@
 # Still needed
 
-
 ## Unknown
+- [ ] Convert to zsh -> `emulate sh -c '. ~/.bashrc'`
 - [ ] akiflow
 
 ## Other
