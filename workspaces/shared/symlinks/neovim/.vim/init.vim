@@ -12,7 +12,11 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug '/opt/homebrew/opt/fzf'
+" set rtp+=/opt/homebrew/opt/fzf
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
 
 " Nvim shit
 " Plug 'floobits/floobits-neovim'
@@ -22,18 +26,18 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
 " Coc
 " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Other
 Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'mhinz/vim-grepper'
-Plug 'kchmck/vim-coffee-script'
+" Plug 'kchmck/vim-coffee-script'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomtom/tcomment_vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'muz/vim-gemfile', {'for': 'ruby'}
+" Plug 'muz/vim-gemfile', {'for': 'ruby'}
 " Plug 'chrisbra/csv.vim'
 Plug 'tmhedberg/matchit', { 'for': ['html', 'xml'] }
 Plug 'tpope/vim-fugitive'
@@ -43,8 +47,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
 
 " Colorschemes
-Plug 'altercation/vim-colors-solarized'
-Plug 'tyrannicaltoucan/vim-quantum'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'tyrannicaltoucan/vim-quantum'
 
 " Multiple cursors
 Plug 'terryma/vim-multiple-cursors'
@@ -73,7 +77,7 @@ Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'naquad/ctrlp-digraphs.vim'
 
 " Angular
-Plug 'burnettk/vim-angular'
+" Plug 'burnettk/vim-angular'
 
 " ReactJs & JSX
 Plug 'pangloss/vim-javascript'
@@ -85,11 +89,11 @@ Plug 'sheerun/vim-polyglot'
 let g:polyglot_disabled = ['csv']
 
 " Themes
-Plug 'chriskempson/base16-vim'
+" Plug 'chriskempson/base16-vim'
 Plug 'joshdick/onedark.vim'
 
 " Tmux Nav
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 
 " Clojure in Vim
 Plug 'guns/vim-clojure-static'
@@ -122,11 +126,11 @@ Plug 'hashivim/vim-terraform'
 let g:terraform_fmt_on_save=1
 
 " tab names
-Plug 'gcmt/taboo.vim'
+" Plug 'gcmt/taboo.vim'
 
-let g:taboo_modified_tab_flag = "‡"
-" let g:taboo_tab_format = "[%N. %P%m] "
-let g:taboo_tab_format = "[%N. %f%m] "
+" let g:taboo_modified_tab_flag = "‡"
+" let g:taboo_tab_format = "[%N. %f%m] "
+" old -> let g:taboo_tab_format = "[%N. %P%m] "
 
 " taboo reset-tab-names
 " nmap <silent> <C-G>f :let g:taboo_tab_format="[%N. %f%m] "<CR>:TabooReset<CR>
@@ -288,7 +292,7 @@ nmap <leader>p (y%%a<CR><esc>p==
 
 " easy to source / edit this file
 map ,S :source ~/.vimrc<CR>
-map <silent> ,v :tabedit ~/.vimrc<CR>:lcd ~/src/github/dotfiles/mine<CR>
+map <silent> ,v :tabedit ~/.vimrc<CR>
 
 " NERDTree
 nmap <silent> <LocalLeader>tt :NERDTreeToggle<CR>                 " Make F2 open NERDTree

@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [[ ! -f ~/.vim/init.vim ]]; then
-  ln -s ~/.vimrc ~/.vim/init.vim
+if [[ ! -f ~/.vimrc ]]; then
+  ln -s ~/.vim/init.vim ~/.vimrc
 fi
 
 mkdir -p ~/.config
