@@ -1,7 +1,7 @@
 # For work "laptops" (non-Dev)
 
 cask "evernote"
-cask "gpg-suite-no-email"
+cask "gpg-suite-no-mail"
 cask "krisp"
 cask "linear-linear"
 cask "microsoft-word"
