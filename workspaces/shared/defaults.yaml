@@ -18,9 +18,49 @@ com.apple.dock:
   # Don't show recently used applications in the Dock
   show-recents: false
 
+  magnification: true
+  tilesize: 24
+  largesize: 128
+
 com.apple.iCal:
   # Week starts on Monday
   "first day of week": 1
+
+com.apple.finder:
+  # Finder > View > Show view options > Sort Group By > Name.
+  FXArrangeGroupViewBy: Name
+
+  # Finder > Preferences > Advanced > When performing a search > Search the
+  # current folder.
+  FXDefaultSearchScope: SCcf
+  # Finder > View > Show view options > Group By > None.
+  FXPreferredGroupBy: None
+
+  # Finder > View > As List.
+  FXPreferredViewStyle: Nlsv
+
+  # Finder > Preferences > New Finder windows show > Home directory.
+  NewWindowTarget: PfHm
+
+  # Finder > Preferences > New Finder windows show > Home directory.
+  NewWindowTargetPath: "file://${HOME}"
+
+  # Enable "Quit Finder" menu item.
+  QuitMenuItem: true
+
+  # Finder > Preferences > Show these items on the desktop > Hard disks.
+  ShowHardDrivesOnDesktop: false
+
+  # Finder > View > Show Path Bar
+  ShowPathbar: true
+
+  PathBarRootAtHome: true
+
+  # Finder > View > Show Status Bar
+  ShowStatusBar: true
+
+com.apple.menuextra.battery:
+  ShowPercent: YES
 
 # com.apple.terminal:
 #   "Default Window Settings": "Brian"
