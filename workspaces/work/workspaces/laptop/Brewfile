@@ -1,6 +1,7 @@
 # For work "laptops" (non-Dev)
 
 cask "evernote"
+cask "fantastical"
 cask "gpg-suite-no-mail"
 cask "krisp"
 cask "linear-linear"
@@ -15,5 +16,4 @@ cask "transmit"
 cask "zoom"
 
 mas "Bear", id: 1091189122
-mas "Fantastical", id: 975937182
 mas "Things 3", id: 904280696
