@@ -3,3 +3,4 @@ workspaces/shared/symlinks/neovim/.vim/undo
 workspaces/shared/symlinks/neovim/.vim/.vim
 
 id_rsa*
+known_hosts
