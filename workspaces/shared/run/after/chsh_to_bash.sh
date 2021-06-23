@@ -1,3 +1,5 @@
 #!/bin/sh
 
-chsh -s /bin/bash
+if [[ "${SHELL}" != "/bin/bash" ]]; then
+  chsh -s /bin/bash
+fi
