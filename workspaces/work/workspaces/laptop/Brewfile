@@ -1,10 +1,12 @@
 # For work "laptops" (non-Dev)
+tap "homebrew/cask-drivers"
 
 cask "evernote"
 cask "fantastical"
 cask "gpg-suite-no-mail"
 cask "krisp"
 cask "linear-linear"
+cask "homebrew/cask-drivers/logitech-options"
 cask "microsoft-word"
 cask "microsoft-excel"
 cask "notion"
