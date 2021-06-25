@@ -43,8 +43,15 @@ function git_initials {
   fi
 }
 
+function __hostname {
+  if [[ -n "$SSH_CLIENT" ]]; then
+    local hn=$(hostname | cut -d'.' -f1)
+    echo "<${hn}> "
+  fi
+}
+
 if [ -n "$PS1" ]; then
-  export PS1="\$(truncated_pwd 3)\$(git_initials)\$(__parse_git_branch__) -> "
+  export PS1="\$(__hostname)\$(truncated_pwd 3)\$(git_initials)\$(__parse_git_branch__) -> "
   export PS2='> '
 
   if [ "$TERM_PROGRAM" != "Hyper" ]; then
