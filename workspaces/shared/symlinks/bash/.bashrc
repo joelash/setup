@@ -96,6 +96,8 @@ export AWS_SDK_LOAD_CONFIG=1
 ### Python
 ### End Python
 
- export PATH="/usr/local/opt/node@12/bin:$PATH"
 
- eval "$(direnv hook bash)"
+export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+
+eval "$(direnv hook bash)"
