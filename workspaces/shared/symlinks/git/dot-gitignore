@@ -25,6 +25,7 @@ TAGS
 
 # virtual env folders
 *.virtualenv/
+*.venv/
 
 Dockerfile*.ignored
 yaks.ignored.md
