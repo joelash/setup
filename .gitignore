@@ -1,6 +1,7 @@
 workspaces/shared/symlinks/neovim/.vim/plugged
 workspaces/shared/symlinks/neovim/.vim/undo
 workspaces/shared/symlinks/neovim/.vim/.vim
+workspaces/shared/symlinks/neovim/.vim/swp
 
 id_rsa*
 known_hosts
