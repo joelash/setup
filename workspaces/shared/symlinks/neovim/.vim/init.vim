@@ -300,7 +300,7 @@ nmap <silent> <LocalLeader>l :NERDTreeFind<CR>         " Locate current file in 
 let NERDTreeShowHidden=1
 
 " TAGS
-map <silent> <LocalLeader>rt :!/usr/local/bin/ctags -R --exclude="@/Users/joelash/.ctagsignore" --extra=+f --fields=+l<CR>
+map <silent> <LocalLeader>rt :!/opt/homebrew/bin/ctags -R --exclude="@/Users/joelash/.ctagsignore" --extra=+f --fields=+l<CR>
 
 " map capital W and Q to lowecase
 nmap :W :w
