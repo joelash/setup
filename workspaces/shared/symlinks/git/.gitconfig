@@ -28,6 +28,7 @@
   stagedtool = difftool --cached
   grep = grep -n --color
   pushh = push origin HEAD
+	br-commits = "!f() { git log $1 --not $(git rev-list $2 ^$1 --merges | tail -1)^; }; f"
 [branch]
   autosetupmerge = always
 [core]

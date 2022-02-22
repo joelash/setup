@@ -1,3 +1,9 @@
+#mkdir and cs
+
+function mkcd {
+  mkdir -p "$@" && cd "$@"
+}
+
 #terminal name
 
 function tname {

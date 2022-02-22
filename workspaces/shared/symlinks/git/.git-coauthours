@@ -1,12 +1,8 @@
 {
   "coauthors": {
-    "mn": {
-      "name": "Mark Nicolosi",
-      "email": "mark@aclaimant.com"
-    },
-    "cn": {
-      "name": "Case Nelson",
-      "email": "case@aclaimant.com"
+    "al": {
+      "name": "Andrew Linder",
+      "email": "andrew.linder@aclaimant.com"
     },
     "bd": {
       "name": "Brian Drum",
@@ -15,6 +11,22 @@
     "cm": {
       "name": "Charles Mueller",
       "email": "charles.mueller@aclaimant.com"
+    },
+    "cn": {
+      "name": "Case Nelson",
+      "email": "case@aclaimant.com"
+    },
+    "df": {
+      "name": "Dane Filipczak",
+      "email": "dane.filipczak@aclaimant.com"
+    },
+    "jd": {
+      "name": "Joshua Davey",
+      "email": "joshua.davey@aclaimant.com"
+    },
+    "mn": {
+      "name": "Mark Nicolosi",
+      "email": "mark@aclaimant.com"
     }
   }
 }

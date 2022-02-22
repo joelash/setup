@@ -37,17 +37,17 @@ alias log='git log --oneline'
 alias glg='git log --pretty=oneline'
 alias gdc='git diff --staged'
 
-# python simple server
-alias simple-server='python -m SimpleHTTPServer 8000'
-
 # bundler
 alias bi='bundle install'
 alias b='bundle install --path .bundle --binstubs=./.bin'
 alias be='bundle exec'
 
-# postgres
-alias start-pg='/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias stop-pg='/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
 # Terraform / terragrunt
 alias tg='terragrunt'
+
+#docker compose
+alias dc='docker compose'
+
+
+# TriggerMesh TIL
+alias til='~/src/exploration/triggermesh/til_v0.1.0_darwin_arm64'
