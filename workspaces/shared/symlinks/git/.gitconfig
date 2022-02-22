@@ -41,6 +41,7 @@
   ignore-whitespace = nowarn
 [pull]
 	rebase = true
+  prune = true
 [github]
 	user = joelash
 [difftool "Kaleidoscope"]

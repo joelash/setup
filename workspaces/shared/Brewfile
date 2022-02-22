@@ -16,6 +16,8 @@ brew "editorconfig"
 # Distributed revision control system
 brew "git"
 
+brew "git-extras"
+
 # Mac App Store command-line interface
 brew "mas"
 
