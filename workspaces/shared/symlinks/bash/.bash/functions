@@ -58,7 +58,7 @@ function collapse_pwd {
 }
 
 function truncated_pwd() {
-  local n=$1 # n = number of directories to show in full (n = 3, /a/b/c/dee/ee/eff)
+  local n=${1-3} # n = number of directories to show in full (n = 3, /a/b/c/dee/ee/eff)
   local path=$(collapse_pwd)
 
   # split our path on /
