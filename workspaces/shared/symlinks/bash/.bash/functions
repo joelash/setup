@@ -15,8 +15,14 @@ function _t {
   tname ${PWD##*/}
 }
 
+function tsh {
+  local host=$1
+  local tmuxName="${2:-tmux-main}"
+  ssh -t -o RemoteCommand="tmux -CC new -A -s $tmuxName" $host
+}
 
-function tmux {
+
+function _tmux {
   if [ -n "$3" ] && ([ "$1" = "a" ] || [ "$1" = "new" ]) && ! [[ "$3" =~ ^[0-9]+$ ]]; then
     tname $3
   fi
