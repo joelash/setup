@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/bashrc.pre.bash"
 source ~/.bash/functions
 for file in ~/.bash/*.sh; do
   source $file
