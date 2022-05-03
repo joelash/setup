@@ -48,6 +48,8 @@ alias tg='terragrunt'
 #docker compose
 alias dc='docker compose'
 
+# wezterm
+alias wsh='wezterm ssh'
 
 # TriggerMesh TIL
 alias til='~/src/exploration/triggermesh/til_v0.1.0_darwin_arm64'

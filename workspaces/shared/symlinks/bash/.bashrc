@@ -117,7 +117,7 @@ export PATH="$HOME/bin:$PATH"
 
 eval $(thefuck --alias)
 
+eval "$(starship init bash)"
+
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/bashrc.post.bash"
-
-eval "$(starship init bash)"
