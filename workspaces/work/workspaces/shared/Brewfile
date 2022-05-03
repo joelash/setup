@@ -1,3 +1,4 @@
 # Work shared
 
 brew "postgresql"
+brew "starship"
