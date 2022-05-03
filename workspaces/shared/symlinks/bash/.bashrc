@@ -109,6 +109,8 @@ export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 
 # Use Node16 not Node 17
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+# Fig path
+export PATH="~/.local/bin:$PATH"
 
 ## Add bit.dev install
 export PATH="$HOME/bin:$PATH"
@@ -117,3 +119,5 @@ eval $(thefuck --alias)
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/bashrc.post.bash"
+
+eval "$(starship init bash)"
