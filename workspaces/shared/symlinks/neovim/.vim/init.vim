@@ -49,6 +49,7 @@ Plug 'airblade/vim-gitgutter'
 " Colorschemes
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'arcticicestudio/nord-vim'
 
 " Multiple cursors
 Plug 'terryma/vim-multiple-cursors'
@@ -173,13 +174,8 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-colorscheme onedark
-
-" Love for base16 shell
-" if filereadable(expand("~/.vimrc_background"))
-"   let base16colorspace=256
-"   source ~/.vimrc_background
-" endif
+" colorscheme onedark
+colorscheme nord
 
 " Define Ctrl-w + num to go to vim window
 let i = 1
@@ -422,7 +418,7 @@ nmap <silent> <Leader><space> :CtrlP<CR>
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 " let g:airline_theme='base16color'
-let g:airline_theme='onedark'
+" let g:airline_theme='onedark'
 " let g:airline_powerline_fonts = 1
 let g:airline_detect_spell = 0
 let g:airline_detect_spelllang = 0

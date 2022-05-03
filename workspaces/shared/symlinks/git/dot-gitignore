@@ -36,3 +36,4 @@ yaks.ignored.md
 bower_components
 npm-debug.log
 Brewfile.lock.json
+node_modules/

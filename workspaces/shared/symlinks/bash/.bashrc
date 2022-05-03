@@ -56,10 +56,10 @@ if [ -n "$PS1" ]; then
   export PS1="\$(__hostname)\$(truncated_pwd 3)\$(git_initials)\$(__parse_git_branch__) -> "
   export PS2='> '
 
-  if [ "$TERM_PROGRAM" != "Hyper" ]; then
-    BASE16_SHELL=$HOME/src/github/base16-shell/
-    [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-  fi
+  # if [ "$TERM_PROGRAM" != "Hyper" ]; then
+  #   BASE16_SHELL=$HOME/src/github/base16-shell/
+  #   [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+  # fi
   _t
   [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 fi
@@ -110,4 +110,10 @@ export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 # Use Node16 not Node 17
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
+## Add bit.dev install
+export PATH="$HOME/bin:$PATH"
+
 eval $(thefuck --alias)
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/bashrc.post.bash"
